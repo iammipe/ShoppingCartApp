@@ -1,0 +1,41 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+#element::-webkit-scrollbar {
+    display: none;
+}
+
+#errors {
+    background-image: url('../images/dark-side.webp');
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    font-family: 'Baloo Bhaijaan', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 2em;
+    padding-left: 10%;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.5em;
+    padding-left: 10%;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:active{
+    color: white;
+}

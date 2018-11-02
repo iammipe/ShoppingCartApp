@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Error has occurred";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Error is occurred">
+    <title>@ViewBag.Title</title>
+
+    <link href="~/css/errorStyle.css" rel="stylesheet" />
+    <link href="~/css/loading.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script type="module" src="@Url.Content("~/js/viewComponents/errorsView.jsx")">
+    </script>
+</head>
+
+<body>
+    <div class="loading-screen">
+        <img class="lazyload" src="~/images/loading.webp" />
+    </div>
+
+    <div id="errors">
+
+    </div>
+
+
+</body>
+</html>

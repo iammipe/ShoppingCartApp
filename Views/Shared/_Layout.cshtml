@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <link href="~/css/shoppingCartComponentStyle.css" rel="stylesheet" />
+    <link href="~/css/shoppingItemsComponentStyle.css" rel="stylesheet" />
+    <link href="~/css/loginComponentStyle.css" rel="stylesheet" />
+    <link href="~/css/registrationComponentStyle.css" rel="stylesheet" />
+    <link href="~/css/categorystyle.css" rel="stylesheet" />
+    <link href="~/css/loading.css" rel="stylesheet" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="This is a webshop for watches">
+    <title>@ViewBag.Title</title>
+
+    <script src="https://unpkg.com/lazysizes@4.1.4/lazysizes.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="~/js/animations/animations.js"></script>
+</head>
+
+<body>
+
+    <div class="menu-bar">
+        <div class="menu-bar-logo">
+            <a href="/"><img alt="Logo" class="lazyload" src="~/images/logo.png" /> </a>
+        </div>
+
+        <div class="menu-bar-toggle">
+            <img alt="Ham icon" class="lazyload" src="~/images/hamicon.webp" />
+        </div>
+
+        <div class="menu-bar-options">
+            <a href="/Home/Products"> PRODUCTS </a>
+            <a href="/ShoppingCart/Index"> MY CART </a>
+            <a href="/Home/Login"> LOGIN </a>
+        </div>
+    </div>
+
+    <div class="loading-screen">
+        <img class="lazyload" src="~/images/loading.webp" />
+    </div>
+
+    <div class="components">
+        @RenderBody()
+    </div>
+</body>
+</html>
