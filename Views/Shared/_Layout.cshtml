@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="icon" href="https://www.richardmille.com/favicon-48x48.ico">
 
     <link href="~/css/shoppingCartComponentStyle.css" rel="stylesheet" />
     <link href="~/css/shoppingItemsComponentStyle.css" rel="stylesheet" />
@@ -9,7 +10,7 @@
     <link href="~/css/registrationComponentStyle.css" rel="stylesheet" />
     <link href="~/css/categorystyle.css" rel="stylesheet" />
     <link href="~/css/loading.css" rel="stylesheet" />
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="description" content="This is a webshop for watches">
@@ -17,7 +18,7 @@
 
     <script src="https://unpkg.com/lazysizes@4.1.4/lazysizes.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="~/js/animations/animations.js"></script>
+    <script src="~/js/animations/preloader.js"></script>
 </head>
 
 <body>
@@ -32,9 +33,20 @@
         </div>
 
         <div class="menu-bar-options">
-            <a href="/Home/Products"> PRODUCTS </a>
-            <a href="/ShoppingCart/Index"> MY CART </a>
-            <a href="/Home/Login"> LOGIN </a>
+            @if (!User.Identity.IsAuthenticated)
+            {
+                <a href="/" id="home-link"> HOME </a>
+                <a href="/Products" id="products-link"> PRODUCTS </a>
+                <a href="/Login" id="login-link"> LOGIN </a>
+            }
+            else
+            {
+                <a href="/Products" id="products-link"> PRODUCTS </a>
+                <a href="/Cart" id="my-shop-cart-link"> MY CART </a>
+                <a href="/Login/Logout" id="logout-link"> LOGOUT </a>
+                <a>@User.Identity.Name</a>
+            }
+
         </div>
     </div>
 
@@ -45,5 +57,8 @@
     <div class="components">
         @RenderBody()
     </div>
+
+
+    <script src="~/js/animations/animations.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
-﻿using Shop.Data;
+﻿using System.Collections.Generic;
 using Shop.Models;
-using System.Collections.Generic;
 using System.Linq;
+using Shop.Data;
 
 namespace Shop.Repository
 {

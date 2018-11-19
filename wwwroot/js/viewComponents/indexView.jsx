@@ -12,6 +12,7 @@ class Products extends React.Component {
     componentDidMount() {
         this.shoppingItem.current.getTopData();
         $(".loading-screen").css("display", "none");
+        $("#home-link").css("color", "white");
     }
 
     render() {

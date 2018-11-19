@@ -1,14 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Shop.Models;
 using Shop.Services;
+using Shop.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Shop.Controllers
 {
-    public class ShoppingCartController : Controller
+    [Authorize]
+    public class CartController : Controller
     {
         IShoppingCartService _shoppingCartService;
 
-        public ShoppingCartController(IShoppingCartService _services) => this._shoppingCartService = _services;
+        public CartController(IShoppingCartService _services) => this._shoppingCartService = _services;
 
         public IActionResult Index() => View();
 

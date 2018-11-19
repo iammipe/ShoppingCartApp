@@ -1,7 +1,7 @@
-﻿using Shop.Enums;
+﻿using System.Linq;
 using Shop.Models;
+using Shop.Enums;
 using System;
-using System.Linq;
 
 namespace Shop.Services.Discounts
 {

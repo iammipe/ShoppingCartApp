@@ -2,11 +2,13 @@
     position: absolute;
     margin: 0;
     padding: 0;
-    /*background-color: #251D1D;*/
     background-image: url('../images/wall.webp');
     color: white;
     font-family: "Raleway";
     max-width: 100%;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -34,16 +36,17 @@
         padding: 0 3vw;
         font-weight: bold;
         text-decoration: none;
-        color: white;
+        color: #a8a8a8;
     }
 
-.menu-bar-options a{
-    border-right: 2px solid white;
-}
-
-    .menu-bar-options a:last-child {
-        border-right: 0px solid white;
+    .menu-bar-options a {
+        border-right: 2px solid #a8a8a8;
     }
+
+        .menu-bar-options a:last-child {
+            border-right: 0px solid #a8a8a8;
+            background-color: black;
+        }
 
 .menu-bar-logo {
     height: 100%;
@@ -72,6 +75,7 @@
 .components {
     width: 100vw;
     max-width: 100%;
+    height: 100%;
 }
 
 .content {
@@ -178,7 +182,6 @@
 
 #footer h3{
     position: absolute;
-    bottom: 0;
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
@@ -224,12 +227,11 @@
     .menu-bar-logo{
         width: 70%;
     }
-
-        .menu-bar-logo img {
-            height: 100%;
-            width: 80%;
-            padding-left: 10%;
-        }
+    .menu-bar-logo img {
+        height: 100%;
+        width: 80%;
+        padding-left: 10%;
+    }
 
     .menu-bar-options {
         flex-direction: column;
@@ -259,8 +261,7 @@
     }
 
     #main {
-        /*background-image: url('../images/rm-mobile.jpg');*/
-        background-image: url();
+        background-image: url('../images/watch.PNG');
         background-color: black;
     }
 
@@ -268,8 +269,6 @@
             width: 80%;
             margin-right: 10%;
             text-align: center;
-            background-image: url();
-            background-color: black;
         }
 
     #main p{
@@ -279,6 +278,7 @@
         padding-left:0;
         margin-top: 10%;
     }
+
 }
 
     @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
@@ -296,3 +296,42 @@
             margin-right: 15%;
         }
     }
+
+
+@media only screen and (max-height: 600px) and (orientation : landscape) {
+
+    .menu-bar {
+        height: 15vh;
+    }
+
+    .menu-bar-logo img {
+        width: 150%;
+    }
+
+    .menu-bar-options {
+        font-size: 0.8em;
+    }
+
+    #main p {
+        display: none;
+    }
+
+    #main h1 {
+        font-size: 1.5em;
+    }
+
+    .item-container {
+        height: 100vh;
+        width: 45%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+
+    .item-name{
+        font-size: 1em;
+    }
+
+    .item-price{
+        font-size: 1em;
+    }
+}

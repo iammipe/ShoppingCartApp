@@ -17,11 +17,12 @@
     componentDidMount() {
         this.getData();
         $(".loading-screen").css("display", "none");
+        $("#my-shop-cart-link").css("color", "white");
     }
 
     getData() {
         $.ajax({
-            url: "/ShoppingCart/GetShoppingCart",
+            url: "/Cart/GetShoppingCart",
             type: "POST",
             success: function (json) {
                 this.setState({
@@ -48,7 +49,7 @@
 
         
         $.ajax({
-            url: "/ShoppingCart/UpdateItemQuantity",
+            url: "/Cart/UpdateItemQuantity",
             data: { "id": id, "quantity": quantity },
             type: "POST",
             success: function () {
@@ -77,7 +78,7 @@
 
     removeItemFromShoppingCart(id) {
         $.ajax({
-            url: "/ShoppingCart/RemoveFromCart",
+            url: "/Cart/RemoveFromCart",
             data: { "id": id },
             type: "POST",
             success: function () {

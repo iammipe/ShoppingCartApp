@@ -123,6 +123,11 @@ hr {
         display: none;
     }
 
+    #empty-cart{
+        width: 70%;
+        margin-left: 10%;
+    }
+
     hr{
         display: none;
     }

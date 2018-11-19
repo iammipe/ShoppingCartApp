@@ -77,3 +77,54 @@
 .filter-options{
     position: absolute;
 }
+
+@media only screen and (max-width: 600px) {
+    #search-container img {
+        width: 7%;
+    }
+
+    #search-container{
+        margin-bottom: 15%;
+    }
+
+    #search-container input{
+        width: 70%;
+    }
+
+    #main-products-wallpaper {
+        background-size: 200% 100%;
+        background-position: center;
+    }
+
+    #main-products-wallpaper h2{
+        margin-left: 15%;
+        margin-right: 15%;
+        font-size: 1.5em;
+        padding-bottom: 15%;
+    }
+}
+
+@media only screen and (max-height: 600px) and (orientation : landscape) {
+
+    #main-products-wallpaper h2 {
+        font-size: 1.5em;
+    }
+
+    #search-container img {
+        width: 3%;
+    }
+
+    .shopping-cart-container {
+        margin-left: 5%;
+        width: 90%;
+    }
+
+    #title {
+        margin-top: 25vh;
+        font-size: 1.5em;
+    }
+
+    .product-container button {
+        width: 25%;
+    }
+}

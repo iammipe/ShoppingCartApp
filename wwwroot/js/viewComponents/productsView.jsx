@@ -13,6 +13,7 @@ class AllProducts extends React.Component {
     componentDidMount() {
         this.shoppingItem.current.getAllData();
         $(".loading-screen").css("display", "none");
+        $("#products-link").css("color", "white");
     }
 
     searchItemsByUserInput(x) {

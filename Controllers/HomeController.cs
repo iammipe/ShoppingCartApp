@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Shop.Services;
 using Shop.Services.Product;
 using Shop.ViewModel;
+using Shop.Services;
 
 namespace Shop.Controllers
 {
@@ -27,11 +27,5 @@ namespace Shop.Controllers
             _productService.GetSearchedProductsAndNumberOfItemsInShoppingCart(_shoppingCartService.GetNumberOfItemsInTheCart(), userData);
 
         public IActionResult Index() => View();
-        public IActionResult Products() => View();
-        public IActionResult Login() => View();
-        public IActionResult Registration() => View();
-        public IActionResult Categories() => View();
-        
-        public IActionResult Test() => View();
     }
 }

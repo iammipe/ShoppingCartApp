@@ -1,11 +1,11 @@
-﻿using System;
-using System.Linq;
-using Microsoft.AspNetCore.Http;
-using Shop.Extensions;
-using Shop.Models;
-using Shop.Repository;
+﻿using Microsoft.AspNetCore.Http;
 using Shop.Services.Discounts;
+using Shop.Extensions;
+using Shop.Repository;
 using Shop.ViewModel;
+using System.Linq;
+using Shop.Models;
+using System;
 
 namespace Shop.Services
 {

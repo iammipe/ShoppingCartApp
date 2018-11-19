@@ -39,3 +39,9 @@ a{
 a:active{
     color: white;
 }
+
+@media only screen and (max-width: 600px) {
+    h1, h2{
+        font-size: 1em;
+    }
+}

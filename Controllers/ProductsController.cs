@@ -2,7 +2,7 @@
 
 namespace Shop.Controllers
 {
-    public class ErrorsController : Controller
+    public class ProductsController : Controller
     {
         public IActionResult Index() => View();
     }

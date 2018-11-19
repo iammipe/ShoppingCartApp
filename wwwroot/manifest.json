@@ -1,9 +1,9 @@
 ﻿{
-  "name": "Progressive Web App",
-  "short_name": "PWA",
+  "name": "Richard Mille Web App",
+  "short_name": "Richard Mille",
   "theme_color": "#000000",
   "background_color": "#251D1D",
-  "description": "Creating PWA in ASP.NET Core.",
+  "description": "Richard Mille Web App",
   "icons": [
     {
       "src": "/images/icon192x192.png",

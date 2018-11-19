@@ -10,15 +10,14 @@ using Shop.Services;
 using React.AspNet;
 using Shop.Data;
 using System;
+using Shop.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace Shop
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+        public Startup(IConfiguration configuration) => Configuration = configuration;
 
         public IConfiguration Configuration { get; }
         
@@ -32,12 +31,21 @@ namespace Shop
             services.AddReact();
 
             services.AddMvc();
-            services.AddProgressiveWebApp();
+            //services.AddProgressiveWebApp();
 
             services.AddDbContext<ProductDBContext>(
                 options => options.UseSqlServer(
                     @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Shop;Integrated Security=True;Connect Timeout=30;"
                 ));
+
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ProductDBContext>()
+                .AddDefaultTokenProviders();
+
+            services.ConfigureApplicationCookie( options =>
+            {
+                options.LoginPath = "/Login";
+            });
             
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IProductService, ProductService>();
@@ -49,13 +57,14 @@ namespace Shop
         
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-
             app.UseExceptionHandler("/Errors");
             app.UseStatusCodePagesWithReExecute("/Errors");
 
             app.UseReact(config => { });
             app.UseStaticFiles();
             app.UseSession();
+            app.UseIdentity();
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
