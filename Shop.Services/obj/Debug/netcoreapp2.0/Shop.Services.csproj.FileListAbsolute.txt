@@ -1,0 +1,14 @@
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Services\bin\Debug\netcoreapp2.0\Shop.Services.deps.json
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Services\bin\Debug\netcoreapp2.0\Shop.Services.dll
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Services\bin\Debug\netcoreapp2.0\Shop.Services.pdb
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Services\bin\Debug\netcoreapp2.0\Shop.Entities.dll
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Services\bin\Debug\netcoreapp2.0\Shop.Repository.dll
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Services\bin\Debug\netcoreapp2.0\Shop.Entities.pdb
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Services\bin\Debug\netcoreapp2.0\Shop.Repository.pdb
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Services\obj\Debug\netcoreapp2.0\Shop.Services.csprojAssemblyReference.cache
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Services\obj\Debug\netcoreapp2.0\Shop.Services.csproj.CoreCompileInputs.cache
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Services\obj\Debug\netcoreapp2.0\Shop.Services.AssemblyInfoInputs.cache
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Services\obj\Debug\netcoreapp2.0\Shop.Services.AssemblyInfo.cs
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Services\obj\Debug\netcoreapp2.0\Shop.Services.csproj.CopyComplete
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Services\obj\Debug\netcoreapp2.0\Shop.Services.dll
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Services\obj\Debug\netcoreapp2.0\Shop.Services.pdb

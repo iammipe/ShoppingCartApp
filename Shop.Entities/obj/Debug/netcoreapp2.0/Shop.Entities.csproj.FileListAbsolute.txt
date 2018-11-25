@@ -1,0 +1,9 @@
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Entities\bin\Debug\netcoreapp2.0\Shop.Entities.deps.json
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Entities\bin\Debug\netcoreapp2.0\Shop.Entities.dll
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Entities\bin\Debug\netcoreapp2.0\Shop.Entities.pdb
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Entities\obj\Debug\netcoreapp2.0\Shop.Entities.csprojAssemblyReference.cache
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Entities\obj\Debug\netcoreapp2.0\Shop.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Entities\obj\Debug\netcoreapp2.0\Shop.Entities.AssemblyInfoInputs.cache
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Entities\obj\Debug\netcoreapp2.0\Shop.Entities.AssemblyInfo.cs
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Entities\obj\Debug\netcoreapp2.0\Shop.Entities.dll
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop.Entities\obj\Debug\netcoreapp2.0\Shop.Entities.pdb

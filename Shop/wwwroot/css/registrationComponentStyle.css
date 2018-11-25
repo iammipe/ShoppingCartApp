@@ -1,0 +1,153 @@
+﻿#registration{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#registration-form {
+    height: 100%;
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-container {
+    background-image: url('../images/noise.webp');
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 60%;
+    min-height: 400px;
+    box-shadow: 0px 5px 17px 0px rgba(0,0,0,0.75);
+    margin-left: 10%;
+}
+
+.register-header {
+    margin-top: 10%;
+    width: 80%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-input{
+    height: 45%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+    .register-input input {
+        width: 100%;
+        border: 0;
+        border-bottom: 1px solid white;
+        background-color: rgba(0,0,0,0);
+        outline: none;
+        font-size: 1.1em;
+        padding: 5px;
+        color: white;
+        font-family: "Raleway";
+    }
+
+
+.register-input-names {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.register-input-names input{
+    width: 40%;
+    margin-left: 0;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #d3d3d3;
+    font-style: italic;
+    font-family: "Raleway";
+}
+
+@media only screen and (max-width: 600px) {
+    #registration-form {
+        width: 100%;
+    }
+
+    .register-container {
+        width: 80%;
+        margin-left: 0%;
+    }
+
+    .register-header{
+        text-align: center;
+    }
+}
+
+
+
+
+.svg-wrapper {
+    margin-top: 0;
+    position: relative;
+    width: 150px;
+    /*make sure to use same height/width as in the html*/
+    height: 40px;
+    display: inline-block;
+    border-radius: 3px;
+    margin-left: 5px;
+    margin-right: 5px
+}
+/*
+  This is where we define the fill, color, thickness,
+  and stroke pattern of the SVG when there is no hover.
+  The dasharray and offset together define the line position
+  under the words. Here's also where the transition speed is set.
+*/
+
+#shape {
+    stroke-width: 6px;
+    fill: transparent;
+    stroke: #009FFD;
+    stroke-dasharray: 85 400;
+    stroke-dashoffset: -220;
+    transition: 1s all ease;
+}
+/* 
+    Pushing the text up into the SVG. Without this the
+    text would be below the div's.
+*/
+
+#text {
+    margin-top: -35px;
+    text-align: center;
+}
+
+    #text a {
+        color: white;
+        text-decoration: none;
+        font-weight: 100;
+        font-size: 1.1em;
+    }
+/* 
+    Changing the shape on hover. I change the color of the stroke,
+make it thinner, then set it to again wrap around the entire parent element.
+*/
+
+.svg-wrapper:hover #shape {
+    stroke-dasharray: 50 0;
+    stroke-width: 3px;
+    stroke-dashoffset: 0;
+    stroke: #009FFD;
+    stroke-width: 6px;
+}
+
+text{
+    fill: white;
+}
