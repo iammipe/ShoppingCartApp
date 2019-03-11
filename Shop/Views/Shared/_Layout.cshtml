@@ -10,6 +10,7 @@
     <link href="~/css/registrationComponentStyle.css" rel="stylesheet" />
     <link href="~/css/categorystyle.css" rel="stylesheet" />
     <link href="~/css/loading.css" rel="stylesheet" />
+    <link href="~/css/editShoppingItems.css" rel="stylesheet" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,6 +18,9 @@
     <title>@ViewBag.Title</title>
 
     <script src="https://unpkg.com/lazysizes@4.1.4/lazysizes.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.0/umd/react-dom.development.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="~/js/animations/preloader.js"></script>
 </head>
@@ -29,7 +33,7 @@
         </div>
 
         <div class="menu-bar-toggle">
-            <img alt="Ham icon" class="lazyload" src="~/images/hamicon.webp" />
+            <img alt="Ham icon" class="lazyload" src="~/images/hamicon.jpg" />
         </div>
 
         <div class="menu-bar-options">
@@ -39,10 +43,25 @@
                 <a href="/Products" id="products-link"> PRODUCTS </a>
                 <a href="/Login" id="login-link"> LOGIN </a>
             }
-            else
+            else if (User.IsInRole("Member"))
             {
                 <a href="/Products" id="products-link"> PRODUCTS </a>
                 <a href="/Cart" id="my-shop-cart-link"> MY CART </a>
+                <a href="/Login/Logout" id="logout-link"> LOGOUT </a>
+                <a>@User.Identity.Name</a>
+            }
+            else if (User.IsInRole("Employee"))
+            {
+                <a href="/Products/Edit" id="edit-products-link"> CRUD </a>
+                <!--<a href="/Orders" id=""> ORDERS </a>-->
+                <a href="/Login/Logout" id="logout-link"> LOGOUT </a>
+                <a>@User.Identity.Name</a>
+            }
+            else if (User.IsInRole("Admin"))
+            {
+                <a href="/Products/Edit" id="edit-products-link"> CRUD </a>
+                <!--<a href="/Cart" id=""> ORDERS </a> -->
+                <a href="/Personell" id="edit-users-link"> PERSONELL </a>
                 <a href="/Login/Logout" id="logout-link"> LOGOUT </a>
                 <a>@User.Identity.Name</a>
             }
@@ -51,13 +70,12 @@
     </div>
 
     <div class="loading-screen">
-        <img class="lazyload" src="~/images/loading.webp" />
+        <img class="lazyload" src="~/images/loading.gif" />
     </div>
 
     <div class="components">
         @RenderBody()
     </div>
-
 
     <script src="~/js/animations/animations.js"></script>
 </body>

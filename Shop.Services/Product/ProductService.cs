@@ -1,6 +1,8 @@
 ﻿using Shop.Repository.Repository;
 using Shop.Entities.DTO;
+using Shop.Entities.Models;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Shop.Services.Product
 {
@@ -11,10 +13,12 @@ namespace Shop.Services.Product
         public ProductService(IProductRepository productRepository) 
             => _productRepository = productRepository;
 
+        public List<Shop.Entities.Models.Product> GetAllProducts() => _productRepository.GetAll();
+
         public ProductQuantityDTO GetAllProductsAndNumberOfItemsInShoppingCart(int productsQuantity) 
             => new ProductQuantityDTO
             {
-                Products = _productRepository.GetAll().OrderBy(p => p.ID).ToList(),
+                Products = _productRepository.GetAll().OrderBy(p => p.Name).ToList(),
                 NumberOfProductsInShoppingBag = productsQuantity
             };
 
@@ -43,6 +47,26 @@ namespace Shop.Services.Product
                     NumberOfProductsInShoppingBag = productsQuantity
                 };
             }
+        }
+
+        public bool SetTopProducts(int id)
+        {
+            return _productRepository.ChangeTopProduct(id);
+        }
+
+        public void DeleteProduct(int id)
+        {
+            _productRepository.DeleteProduct(id);
+        }
+
+        public void AddNewProduct(string name, double price, string url)
+        {
+            _productRepository.AddNewProduct(name, price, url);
+        }
+
+        public void EditProduct(int id, string name, double price, string url)
+        {
+            _productRepository.AddNewProduct(id, name, price, url);
         }
     }
 }

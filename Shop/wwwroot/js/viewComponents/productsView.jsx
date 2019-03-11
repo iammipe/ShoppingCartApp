@@ -4,6 +4,10 @@ import ShoppingItems from "../components/shoppingItems.jsx";
 
 
 class AllProducts extends React.Component {
+
+    /**
+        kreira se prop
+     */
     constructor(props) {
         super(props);
         this.shoppingItem = React.createRef();
@@ -16,6 +20,10 @@ class AllProducts extends React.Component {
         $("#products-link").css("color", "white");
     }
 
+    /**
+        UZIMA VRIJEDNOST IZ SEACH KOMPONENTE PREKO PROPSA I ZOVE SHOPPING ITEM COMPONENTU I NNJENU METODU searchItemsAndUpdateState
+        ŠALJE JOJ VRIEJDNOST KOJU JE USER UPISAO U SEARCH KOMPONENTI
+     */
     searchItemsByUserInput(x) {
         this.shoppingItem.current.searchItemsAndUpdateState(x);
     }
@@ -27,6 +35,7 @@ class AllProducts extends React.Component {
                     <MainProducts />
                 </div>
 
+                
                 <div id="search-container">
                     <Search searchItems={this.searchItemsByUserInput} />
                 </div>

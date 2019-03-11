@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Shop.Mobile.Views.LoginPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#323232">
+
+    <StackLayout Orientation="Vertical" BackgroundColor="#323232" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,5">
+        
+            <Entry 
+                Text="{Binding Email}"
+                
+                x:Name="Name"
+                Placeholder="Email"
+            />
+    
+            <Entry 
+                x:Name="Password"
+                Text="{Binding Password}"
+                Placeholder="Password"
+            />
+
+            <Label 
+                x:Name="ErrorMessage"
+                Text="{Binding Message, Mode=TwoWay}"
+                TextColor="White"
+            />
+
+        <Button
+                Text="Login" 
+                TextColor="White"
+                BorderWidth="0"
+                Command="{Binding LoginCommand}"
+            />
+
+        <Button 
+                TextColor="White"
+                BorderWidth="0"
+                Text="Don't have a account? Register" 
+                Clicked="Login_Clicked"
+            />
+
+    </StackLayout>
+</ContentPage>
+    

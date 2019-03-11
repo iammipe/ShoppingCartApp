@@ -13,9 +13,8 @@ namespace Shop.Repository.Repository
         public ProductRepository(ProductDBContext context)
         {
             _context = context;
-            MockData();
         }
-        
+        /*
         void MockData()
         {
             if (!_context.Products.Any())
@@ -149,8 +148,50 @@ namespace Shop.Repository.Repository
                 _context.SaveChanges();
             }
         }
+        */
         public List<Product> GetAll() => _context.Products.ToList();
 
         public Product GetById(int id) => _context.Products.FirstOrDefault(p => p.ID == id);
+
+        public bool ChangeTopProduct(int id)
+        {
+            var isTopProduct = _context.Products.FirstOrDefault(p => p.ID == id).IsTopProduct;
+            isTopProduct = !isTopProduct;
+            _context.Products.FirstOrDefault(p => p.ID == id).IsTopProduct = isTopProduct;
+            _context.SaveChanges();
+            return isTopProduct;
+        }
+
+        public void DeleteProduct(int id)
+        {
+            var deletedProduct = _context.Products.FirstOrDefault(p => p.ID == id);
+            _context.Remove(deletedProduct);
+            _context.SaveChanges();
+        }
+
+        public void AddNewProduct(string name, double price, string url)
+        {
+            Product newProduct = new Product
+            {
+                Name = name,
+                Price = price,
+                ImageURL = url,
+                IsTopProduct = false
+            };
+
+            _context.Add(newProduct);
+            _context.SaveChanges();
+
+        }
+
+        public void AddNewProduct(int id, string name, double price, string url)
+        {
+            var editedProduct = _context.Products.FirstOrDefault(p => p.ID == id);
+            editedProduct.Name = name;
+            editedProduct.Price = price;
+            editedProduct.ImageURL = url;
+
+            _context.SaveChanges();
+        }
     }
 }

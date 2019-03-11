@@ -21,9 +21,10 @@
     color: white;
     width: 50%;
     margin-left: 20%;
-    background-image: url('../images/noise.webp');
+    background-image: url('../images/noise.jpg');
     border-radius: 10px;
 }
+
 
 .shopping-cart-container {
     box-shadow: 0px 5px 17px 0px rgba(0,0,0,0.75);
@@ -31,7 +32,7 @@
     margin-bottom: 5%;
     width: 70%;
     border-radius: 10px;
-    background-image: url('../images/noise.webp');
+    background-image: url('../images/noise.jpg');
 }
 
 .product-container {

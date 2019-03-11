@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Shop.Mobile.Views.RegisterPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#323232"
+             xmlns:viewModels="clr-namespace:Shop.Mobile.ViewModels">
+    
+    <ContentPage.BindingContext>
+        <viewModels:RegisterNewUserViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Margin="0, 10">
+        <Entry 
+            Text="{Binding Name}"
+            Placeholder="Name"
+            />
+
+        <Entry 
+            Text="{Binding Surname}"
+            Placeholder="Surname"
+            />
+
+        <Entry 
+            Text="{Binding Email}"
+            Placeholder="Email"
+            />
+
+        <Entry 
+            Text="{Binding Password}"
+            Placeholder="Password"
+            IsPassword="True"
+            />
+
+        <Entry 
+            Text="{Binding RepeatPassword}"
+            Placeholder="Repeat password"
+            IsPassword="True"
+            />
+
+        <Button 
+            Command="{Binding RegisterCommand}"
+            Text="Register"
+            />
+
+        <Label 
+            Text="{Binding Message, Mode=TwoWay}"
+            />
+
+        <Button x:Name="MessageButton"
+                Text="Have a account? Login"
+            Clicked="Register_Clicked" />
+
+    </StackLayout>  
+</ContentPage>

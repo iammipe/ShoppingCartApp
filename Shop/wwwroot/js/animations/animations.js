@@ -7,7 +7,7 @@ $(".menu-bar-toggle").click(function () {
     }
     else {
         $(".menu-bar-options").css("display", "none");
-        $(".menu-bar-toggle img").attr("src", "/images/hamicon.webp");
+        $(".menu-bar-toggle img").attr("src", "/images/hamicon.jpg");
     }
 
     counter++;

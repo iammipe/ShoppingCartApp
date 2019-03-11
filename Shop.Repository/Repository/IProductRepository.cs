@@ -7,5 +7,9 @@ namespace Shop.Repository.Repository
     {
         List<Product> GetAll();
         Product GetById(int id);
+        bool ChangeTopProduct(int id);
+        void DeleteProduct(int id);
+        void AddNewProduct(string name, double price, string url);
+        void AddNewProduct(int id, string name, double price, string url);
     }
 }

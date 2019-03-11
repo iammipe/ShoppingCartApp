@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Shop.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Member")]
     public class CartController : Controller
     {
         IShoppingCartService _shoppingCartService;

@@ -25,6 +25,7 @@ namespace Shop.Controllers
             {
                 var newUser = new ApplicationUser { UserName = vm.Email, Email = vm.Email, Name = vm.Name, Surname = vm.Surname };
                 var result = await _userManager.CreateAsync(newUser, vm.Password);
+                await _userManager.AddToRoleAsync(newUser, "Member");
 
                 if (result.Succeeded)
                 {

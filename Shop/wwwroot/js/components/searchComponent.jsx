@@ -5,6 +5,10 @@
         this.handleChangeSearch = this.handleChangeSearch.bind(this);
     }
 
+
+    /*
+        STAVLJA PROPERTY OD VARIJABLE "SEARCHITEMS" NA VRIJEDNOST SEARCH INPUTA
+     */
     handleChangeSearch(event) {
         this.props.searchItems(event.target.value.toLowerCase());
     }

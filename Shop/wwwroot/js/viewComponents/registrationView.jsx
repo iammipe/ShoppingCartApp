@@ -10,6 +10,9 @@
         this.inputChangeValue = this.inputChangeValue.bind(this);
     }
 
+    /*
+     DOHVATI SVE PODATKE IZ INPUTA I STAVI IH U OBJEKT 
+     * */
     getUserPersonalData() {
         return newUser = {
             Name: $('#first-name-id').val(),
@@ -20,34 +23,86 @@
         };
     }
 
+    /*
+     VALIDACIJA PODATAKA PREKO REGEXA
+     */
     inputChangeValue() {
         var newUser = this.getUserPersonalData();
         var re = /\S+@\S+\.\S+/;
-        var pass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{8,10}$/;
+        var passwordFirsteLetterUppercase = /^[A-Z][a-z0-9_-]{0,99}$/;
+        var passwordDigitsLong = /^[a-zA-Z0-9]{7,}$/;
+        var passwordContainNumbers = /[0-9]/;
         var button = document.getElementById('register-new-user-button-id');
-        $("#register-new-user-button-id").css('background-color', '#ff6666');
 
         if (newUser.Name === "" || newUser.Surname === "") {
+            this.errorMessageStyle();
             button.innerText = 'Enter name and surname';
         }
+        else if (newUser.Email == "") {
+            this.errorMessageStyle();
+            button.innerText = 'Please enter personal email';
+        }
         else if (!re.test(newUser.Email)) {
+            this.errorMessageStyle();
             button.innerText = 'Please enter valid email';
         }
+        else if (newUser.Password == "") {
+            this.errorMessageStyle();
+            button.innerText = 'Please enter wanted password';
+        }
+        else if (!passwordFirsteLetterUppercase.test(newUser.Password)) {
+            this.errorMessageStyle();
+            button.innerText = 'Password first letter uppercase';
+        }
+        else if (!passwordDigitsLong.test(newUser.Password)) {
+            this.errorMessageStyle();
+            button.innerText = 'Password is too weak (7 digits min)';
+        }
+        else if (!passwordContainNumbers.test(newUser.Password)) {
+            this.errorMessageStyle();
+            button.innerText = 'Password should contain number';
+        }
+        else if (newUser.RepeatPassword == "") {
+            this.errorMessageStyle();
+            button.innerText = 'Please repeat your password';
+        }
         else if (newUser.Password !== newUser.RepeatPassword) {
+            this.errorMessageStyle();
             button.innerText = 'Your passwords are not same';
         }
-        else if (!pass.test(newUser.Password)) {
-            button.innerText = 'Password is too weak';
-        }
         else {
-            button.innerText = 'Register now!!';
-            $("#register-new-user-button-id").css('background-color', '#d3d3d3');
-            $("#register-new-user-button-id").css('width', '80%');
-            $("#register-new-user-button-id").css('transition', '1s');
+            button.innerText = 'REGISTER NOW';
+            this.submitButtonMessageStyle();
             button.disabled = false;
         }
     }
 
+    /*
+     DODAJ CUSTOM STYLE REGISTER BOTUNU AKO IMA NEKA POGRESKA U UNESENIM PODACIMA  
+     */ 
+    errorMessageStyle() {
+        $("#register-new-user-button-id").css('background-color', 'rgba(0,0,0,0)');
+        $("#register-new-user-button-id").css('transition', '1s');
+        $("#register-new-user-button-id").css('color', '#ff6666');
+        $("#register-new-user-button-id").css('font-weight', 'normal');
+        $("#register-new-user-button-id").css('animation', 'none');
+        $("#register-new-user-button-id").css('border', '1px solid #ff6666');
+    }
+
+    /*
+     DODAJ CUSTOM STYLE REGISTER BOTUNU AKO JE SVE UREDU
+     */
+    submitButtonMessageStyle() {
+        $("#register-new-user-button-id").css('background-color', '#AA6944');
+        $("#register-new-user-button-id").css('transition', '1s');
+        $("#register-new-user-button-id").css('color', 'white');
+        $("#register-new-user-button-id").css('font-weight', 'bold');
+        $("#register-new-user-button-id").css('border', '1px solid #AA6944');
+    }
+
+    /*
+     ZAHTJEV NA SERVER ZA DODAVANJE NOVOG KORISNIKA U BAZU PODATAKA
+     */
     registerNewUser() {
         var newUser = this.getUserPersonalData();
 
@@ -61,7 +116,7 @@
                 window.location.href = "/Home/Index";
             }.bind(this),
             error: function () {
-                alert("fails");
+                window.location.href = "/Error";
             }.bind(this)
         });
     }
@@ -70,7 +125,7 @@
         return (
             <div className="register-container">
                 <div className="register-header">
-                    <h2> Register to personal account </h2>
+                    <h2> Register new account </h2>
                 </div>
 
                 <div className="register-input">
@@ -84,7 +139,7 @@
                 </div>
 
                 <div className="buttons-container">
-                    <button id="register-new-user-button-id" onClick={() => this.registerNewUser()}> Register </button>
+                    <button id="register-new-user-button-id" onClick={() => this.registerNewUser()}> Please enter personal data </button>
                     <a href="/Login"> Have an accout? Log in! </a>
                 </div>
             </div>

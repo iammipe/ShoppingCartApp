@@ -9,8 +9,8 @@ function preload() {
 
 preload(
     "../images/rm.jpg",
-    "../images/audem.webp",
-    "../images/rm11-03-transparent.webp",
-    "../images/dark-side.webp",
+    "../images/audem.jpg",
+    "../images/RM11-03-Transparent.jpg",
+    "../images/dark-side.jpg",
     "../images/return.png"
 )

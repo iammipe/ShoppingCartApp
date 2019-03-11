@@ -10,8 +10,8 @@
     constructor(props) {
         super(props);
         this.addOneMoreItemQuantityToShoppingBag = this.addOneMoreItemQuantityToShoppingBag.bind(this);
-        this.removeOneItemQuantityFromShoppingBag = this.removeOneItemQuantityFromShoppingBag.bind(this); 
-        this.removeItemFromShoppingCart = this.removeItemFromShoppingCart.bind(this); 
+        this.removeOneItemQuantityFromShoppingBag = this.removeOneItemQuantityFromShoppingBag.bind(this);
+        this.removeItemFromShoppingCart = this.removeItemFromShoppingCart.bind(this);
     }
 
     componentDidMount() {
@@ -20,6 +20,9 @@
         $("#my-shop-cart-link").css("color", "white");
     }
 
+    /*
+        DOHVATI KOSARICU SA SERVERA
+     */
     getData() {
         $.ajax({
             url: "/Cart/GetShoppingCart",
@@ -33,11 +36,14 @@
                 });
             }.bind(this),
             error: function () {
-                alert("fails");
+                window.location.href = "/Error";
             }.bind(this)
         });
     }
 
+    /**
+        DOHVATI UKUPAN BROJ PROIZVODA U KOSARICI
+     */
     getQuantityOfItemInShoppingBagFromCurrentState(id) {
         for (var j = 0; j < this.state.ShoppingCartItemsState.length; j++) {
             if (this.state.ShoppingCartItemsState[j].product.id === id)
@@ -45,9 +51,10 @@
         }
     }
 
+    /**
+        ZAHTJEV NA SERVER ZA UREĐIVANJE VRIJEDNOSTI KOLIČINE - QUANTITY, PROIZVODU SA IDJEM - ID
+     */
     updateQuantityInDatabase(id, quantity) {
-
-        
         $.ajax({
             url: "/Cart/UpdateItemQuantity",
             data: { "id": id, "quantity": quantity },
@@ -56,14 +63,13 @@
                 this.getData();
             }.bind(this),
             error: function () {
-                alert("fails");
+                window.location.href = "/Error";
             }.bind(this)
         });
     }
 
-    addOneMoreItemQuantityToShoppingBag(id) {
-        console.log(this.state.PriceWithoutDiscountState);
 
+    addOneMoreItemQuantityToShoppingBag(id) {
         var quantity = this.getQuantityOfItemInShoppingBagFromCurrentState(id);
         quantity++;
         this.updateQuantityInDatabase(id, quantity);
@@ -85,18 +91,22 @@
                 this.getData();
             }.bind(this),
             error: function () {
-                alert("fails");
+                window.location.href = "/Error";
             }.bind(this)
         });
+    }
+
+    BackToShoppingButtonIsClicked() {
+        window.history.back();
     }
 
     render() {
         if (this.state.ShoppingCartItemsState.length === 0) {
             return (
-                <h1 id="empty-cart"> Your shopping cart is empty </h1>  
+                <h1 id="empty-cart"> Your shopping cart is empty </h1>
             );
         }
-        
+
         return (
             <div>
                 <h1 id="title"> My shopping cart </h1>
@@ -109,7 +119,7 @@
                     </div>
 
                     <hr />
-                   {
+                    {
                         this.state.ShoppingCartItemsState.map(item =>
                             <div key={item.product.id} className="product-container">
                                 <div><p> {item.product.name} </p> </div>

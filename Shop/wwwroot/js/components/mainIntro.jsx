@@ -9,10 +9,6 @@
             </div>
         );
     }
-
-    getAlert() {
-        alert('main intr clicked');
-    }
 }
 
 export default MainIntro;

@@ -1,7 +1,3 @@
-C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop\obj\Debug\netcoreapp2.0\Shop.Web.csprojAssemblyReference.cache
-C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop\obj\Debug\netcoreapp2.0\Shop.Web.csproj.CoreCompileInputs.cache
-C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop\obj\Debug\netcoreapp2.0\Shop.Web.AssemblyInfoInputs.cache
-C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop\obj\Debug\netcoreapp2.0\Shop.Web.AssemblyInfo.cs
 C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop\bin\Debug\netcoreapp2.0\Shop.Web.deps.json
 C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop\bin\Debug\netcoreapp2.0\Shop.Web.runtimeconfig.json
 C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop\bin\Debug\netcoreapp2.0\Shop.Web.runtimeconfig.dev.json
@@ -13,6 +9,10 @@ C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop\bin\Debug\netcor
 C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop\bin\Debug\netcoreapp2.0\Shop.Entities.pdb
 C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop\bin\Debug\netcoreapp2.0\Shop.Services.pdb
 C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop\bin\Debug\netcoreapp2.0\Shop.Repository.pdb
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop\obj\Debug\netcoreapp2.0\Shop.Web.csprojAssemblyReference.cache
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop\obj\Debug\netcoreapp2.0\Shop.Web.csproj.CoreCompileInputs.cache
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop\obj\Debug\netcoreapp2.0\Shop.Web.AssemblyInfoInputs.cache
+C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop\obj\Debug\netcoreapp2.0\Shop.Web.AssemblyInfo.cs
 C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop\obj\Debug\netcoreapp2.0\Shop.Web.csproj.CopyComplete
 C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop\obj\Debug\netcoreapp2.0\Shop.Web.dll
 C:\Users\Mislav\Documents\Visual Studio 2017\Projects\Shop\Shop\obj\Debug\netcoreapp2.0\Shop.Web.pdb

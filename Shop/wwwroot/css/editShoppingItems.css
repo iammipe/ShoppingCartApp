@@ -1,0 +1,378 @@
+﻿.products-main-item-container{
+    overflow: auto;
+}
+
+#items-table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-bottom: 5em;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+thead{
+    width: 100%;
+}
+
+    #items-table td, #items-table th {
+        padding: 8px;
+        text-align: center;
+        vertical-align: middle;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+tbody {
+    background-image: url('../images/noise.jpg');
+}
+
+.thead {
+    background-color: black;
+}
+
+    #items-table th {
+        color: white;
+    }
+
+        .table-links{
+            color: #a8a8a8;
+        }
+
+        .table-links:hover{
+            cursor: pointer;
+        }
+
+#items-table-first-child{
+    cursor: pointer;
+}
+
+#items-table-first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+#items-table-first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.table-header th {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+#members-tab {
+    background-color: black;
+    transition: 1s;
+}
+
+#employees-tab, #admins-tab{
+    transition: 1s;
+}
+
+
+    .edit-user-full-popup {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: fixed;
+        display: none;
+        background-color: rgba(0,0,0,0.8);
+        align-items: center;
+        justify-content: center;
+        transition: 1s;
+        -webkit-animation-name: added-to-cart;
+        -webkit-animation-duration: 1s;
+        animation-name: added-to-cart;
+        animation-duration: 1s;
+        z-index: 999999;
+        overflow: hidden;
+    }
+
+@keyframes added-to-cart {
+    from {
+        margin-top: -5%;
+        opacity: 0;
+    }
+
+    to {
+        margin-top: 0%;
+        opacity: 1;
+    }
+}
+
+    .edit-user-cart-popup {
+        height: 50%;
+        width: 50%;
+        margin-top: 0%;
+        border-radius: 10px;
+        color: white;
+        background-image: url('../images/noise.jpg');
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .edit-user-cart-popup div{
+        width: 100%;
+        height: 20%;
+    }
+
+
+.edit-user-cart-popup button {
+    height: 80%;
+    width: 20%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    background-color: rgba(0,0,0,0);
+    font-family: "Raleway";
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+.update-button {
+    background-color: rgba(170,105,68,0);
+}
+
+.roles-update-container{
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.edit-user-data-full-popup {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    background-color: rgba(0,0,0,0.8);
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    -webkit-animation-name: added-to-cart;
+    -webkit-animation-duration: 1s;
+    animation-name: added-to-cart;
+    animation-duration: 1s;
+    z-index: 999999;
+    overflow: hidden;
+}
+
+.edit-user-data-popup {
+    height: 50%;
+    width: 50%;
+    margin-top: 0%;
+    border-radius: 10px;
+    color: white;
+    background-image: url('../images/noise.jpg');
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.edit-user-data-popup input{
+    background-color: rgba(0,0,0,0);
+    border: 0px;
+    border-bottom: 1px solid #d3d3d3;
+    width: 40%;
+    outline: none;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.1em;
+    transition: 1s;
+    text-align: center;
+}
+
+.edit-user-data-popup input:focus{
+    width: 55%;
+    transition: 1s;
+}
+
+.edit-user-data-popup h2{
+    margin: 0;
+}
+
+.edit-user-data-popup div{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.edit-user-data-popup div button:first-child{
+    margin-right: 15%;
+}
+
+    .edit-user-data-popup button {
+        padding: 15px 25px;
+        background-color: rgba(0,0,0,0);
+        font-family: "Raleway";
+        color: white;
+        border: 1px solid white;
+        border-radius: 10px;
+        cursor: pointer;
+        outline: none;
+    }
+
+.add-product-full-popup {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    background-color: rgba(0,0,0,0.8);
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    -webkit-animation-name: added-to-cart;
+    -webkit-animation-duration: 1s;
+    animation-name: added-to-cart;
+    animation-duration: 1s;
+    z-index: 999999;
+    overflow: hidden;
+}
+
+
+.add-product-data-popup {
+    height: 60%;
+    width: 50%;
+    margin-top: 0%;
+    border-radius: 10px;
+    color: white;
+    background-image: url('../images/noise.jpg');
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+    .add-product-data-popup input {
+        background-color: rgba(0,0,0,0);
+        border: 0px;
+        border-bottom: 1px solid #d3d3d3;
+        width: 40%;
+        outline: none;
+        color: white;
+        padding: 10px;
+        margin: 10px;
+        font-size: 1.1em;
+        transition: 1s;
+        text-align: center;
+    }
+
+        .add-product-data-popup input:focus {
+            width: 55%;
+            transition: 1s;
+        }
+
+        .add-product-data-popup div{
+            width: 100%;
+        }
+
+    .add-product-data-popup button {
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        width: 20%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: rgba(0,0,0,0);
+        font-family: "Raleway";
+        color: white;
+        border: 1px solid white;
+        border-radius: 10px;
+        cursor: pointer;
+        outline: none;
+    }
+
+
+
+
+    /***
+
+EDIT PRODUCT
+
+
+
+    */
+
+.edit-product-full-popup {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    background-color: rgba(0,0,0,0.8);
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    -webkit-animation-name: added-to-cart;
+    -webkit-animation-duration: 1s;
+    animation-name: added-to-cart;
+    animation-duration: 1s;
+    z-index: 999999;
+    overflow: hidden;
+}
+
+
+.edit-product-data-popup {
+    height: 60%;
+    width: 50%;
+    margin-top: 0%;
+    border-radius: 10px;
+    color: white;
+    background-image: url('../images/noise.jpg');
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+    .edit-product-data-popup input {
+        background-color: rgba(0,0,0,0);
+        border: 0px;
+        border-bottom: 1px solid #d3d3d3;
+        width: 40%;
+        outline: none;
+        color: white;
+        padding: 10px;
+        margin: 10px;
+        font-size: 1.1em;
+        transition: 1s;
+        text-align: center;
+    }
+
+        .edit-product-data-popup input:focus {
+            width: 55%;
+            transition: 1s;
+        }
+
+    .edit-product-data-popup div {
+        width: 100%;
+    }
+
+    .edit-product-data-popup button {
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        width: 20%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: rgba(0,0,0,0);
+        font-family: "Raleway";
+        color: white;
+        border: 1px solid white;
+        border-radius: 10px;
+        cursor: pointer;
+        outline: none;
+    }
